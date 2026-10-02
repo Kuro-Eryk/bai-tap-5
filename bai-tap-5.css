@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  .body-background {
+    font-family: "Poppins";
+    background-color: #ffffff; /* Màu nền xám nhạt toàn trang */
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* 1. Phần thanh bên trái (Sidebar) */
+  .sidebar {
+    width: 78px; /* Độ rộng thanh bên trái */
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  .side-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 159px 0px;
+  }
+  .logo {
+    width: 78px;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      135deg,
+      rgba(65, 130, 249, 0.15) 0%,
+      rgba(65, 130, 249, 0.03) 100%
+    );
+  }
+  .logo1 {
+    background-color: #ffffff;
+    width: 78px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .menu-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .menu-btn:first-child {
+    background: #eef4ff;
+  }
+
+  /* Khung chứa Header và Main Content */
+  .main-wrapper {
+    height: 72px;
+    width: 100%;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+  }
+
+  /* 2. Phần trên cùng (Header) */
+  .header {
+    height: 72px; /* Độ cao thanh trên cùng */
+    background-color: #f9f9f9;
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* 3. Phần khung sườn giữa - phải (Main Content) */
+  .main-content {
+    background-color: f9f9f9;
+    overflow-y: auto;
+    flex: 1;
+    gap: 32px;
+  }
+  .extra-content {
+    display: flex;
+    padding: 16px 32px;
+  }
+  .extra-content1 {
+    display: flex;
+    padding: 32px;
+  }
+  /*text{
+    font-w
+  }*/
+  /* Styling chung cho header */
+  .lms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f9fbfd; /* Màu nền nhạt */
+    font-family: "Poppins";
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  /* Phần bên trái - Lời chào */
+  .welcome-section h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+
+  /* Phần bên phải - Tìm kiếm & Avatar */
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Ô tìm kiếm */
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    gap: 8px;
+    width: 354px;
+  }
+  .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    width: 180px;
+  }
+
+  .search-box input::placeholder {
+    color: #aaa;
+  }
+
+  /* Khung ảnh đại diện */
+  .avatar-box img {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+  }
+  .avatar-box .ring {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+  }
+  .welcome-section .date-text {
+    font-size: 16px;
+    color: #a1a5b7; /* Màu xám nhạt nhẹ nhàng */
+  }
+  /* Container thanh profile */
+  .profile-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Nhóm chứa ảnh đại diện + thông tin */
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Khung đựng ảnh tròn */
+  .avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e0e0e0; /* Màu nền chờ khi chưa có ảnh */
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo/biến dạng */
+  }
+
+  /* Phần chữ (Tên + Email) */
+  .text-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px 20px;
+  }
+
+  .user-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  .user-email {
+    font-size: 16px;
+    color: #9e9e9e;
+  }
+
+  /* Nút Edit */
+  .btn-edit {
+    background-color: #4285f4; /* Màu xanh lá/xương giống hình */
+    color: #ffffff;
+    border: none;
+    padding: 10px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-edit:hover {
+    background-color: #3367d6;
+  }
+  .form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 32px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #f8f8f8;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: none; /* Tháo bỏ giao diện mũi tên mặc định của select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .form-group input::placeholder {
+    color: #a0a0a0;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    background-color: #ffffff;
+    border-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Tùy chỉnh biểu tượng mũi tên cho các ô Select */
+  .select-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #888888;
+    border-bottom: 2px solid #888888;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  .email-box {
+    width: 266px;
+    height: 177px;
+    font-family: "Poppins";
+  }
+
+  .title {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 28px;
+  }
+
+  .email-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .mail-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #edf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+  }
+
+  .email-content {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .email-content input {
+    width: 200px;
+    height: 25px;
+    padding: 0;
+    border: 2px solid #7183a5;
+    font-size: 16px;
+    color: #111;
+  }
+
+  .time {
+    font-size: 16px;
+    color: #888;
+  }
+
+  .add-email {
+    width: 212px;
+    height: 45px;
+    margin-top: 31px;
+    border: none;
+    border-radius: 9px;
+    background: #e9f1ff;
+    color: #397cf5;
+    font-size: 17px;
+    cursor: pointer;
+  }
+}
