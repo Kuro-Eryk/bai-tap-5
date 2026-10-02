@@ -344,6 +344,8 @@ body {
     width: 266px;
     height: 177px;
     font-family: "Poppins";
+    padding: 32px 0px;
+    margin-bottom: 71px;
   }
 
   .title {
