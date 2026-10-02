@@ -13,7 +13,7 @@ body {
     gap: 40px;
     width: 100%;
     box-sizing: border-box;
-    margin: 43px;
+    margin: 0px 43px ;
   }
 
   /* 1. Phần thanh bên trái (Sidebar) */
