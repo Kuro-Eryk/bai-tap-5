@@ -357,7 +357,7 @@ body {
   .email-info {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 26px;
   }
 
   .mail-icon {
